@@ -20,7 +20,7 @@ function Nabeela({ lang }) {
         </div>
         <div className="image">
           <img
-            src="/Nabeela.jpeg"
+            src="Nabeela.jpeg"
             alt="Ms. Nabeela Shahid"
           />
         </div>
