@@ -5,17 +5,17 @@ import "./Hero.css";
 function Hero({ lang }) {
   const slides = [
     {
-      img: "/cover.png",
+      img: "cover.png",
       en: "Empowering Every Child to Shine",
       ur: "ہر بچے کو چمکنے کا موقع دینا ہمارا مشن ہے",
     },
     {
-      img: "/therapy.png",
+      img: "therapy.png",
       en: "Special Education and Therapy with Care",
       ur: "خصوصی تعلیم اور تھراپی خلوص کے ساتھ",
     },
     {
-      img: "/learning.png",
+      img: "learning.png",
       en: "Building Confidence Through Learning",
       ur: "سیکھنے کے ذریعے اعتماد پیدا کرنا",
     },
