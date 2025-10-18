@@ -5,17 +5,17 @@ import "./Hero.css";
 function Hero({ lang }) {
   const slides = [
     {
-      img: "cover.png",
+      img: process.env.PUBLIC_URL + "/cover.png",
       en: "Empowering Every Child to Shine",
       ur: "ہر بچے کو چمکنے کا موقع دینا ہمارا مشن ہے",
     },
     {
-      img: "therapy.png",
+      img: process.env.PUBLIC_URL + "/therapy.jpeg",
       en: "Special Education and Therapy with Care",
       ur: "خصوصی تعلیم اور تھراپی خلوص کے ساتھ",
     },
     {
-      img: "learning.png",
+      img: process.env.PUBLIC_URL + "/learning.jpeg",
       en: "Building Confidence Through Learning",
       ur: "سیکھنے کے ذریعے اعتماد پیدا کرنا",
     },
@@ -23,7 +23,6 @@ function Hero({ lang }) {
 
   const [index, setIndex] = useState(0);
 
-  // Slide change every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
@@ -31,9 +30,7 @@ function Hero({ lang }) {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  // Open contact form in new tab
   const handleNewTabForm = () => {
-    // Create a simple HTML form in a new tab
     const newTab = window.open("", "_blank");
     if (newTab) {
       newTab.document.write(`
@@ -64,7 +61,7 @@ function Hero({ lang }) {
   };
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -73,7 +70,7 @@ function Hero({ lang }) {
         ></div>
       ))}
 
-      <div className="overlay">
+      <div className={`overlay ${lang === "ur" ? "urdu" : ""}`}>
         <h1>{lang === "en" ? slides[index].en : slides[index].ur}</h1>
         <p>
           {lang === "en"

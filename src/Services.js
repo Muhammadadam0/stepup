@@ -4,24 +4,24 @@ import "./Services.css";
 function Services() {
   const data = [
     {
-      img: "/thrapy.png",
+      img: process.env.PUBLIC_URL + "/thrapy.png",
       title: "Therapy Sessions",
-      text: "Speech & Occupational therapy for kids."
+      text: "Speech & Occupational therapy for kids.",
     },
     {
-      img: "/special.png",
+      img: process.env.PUBLIC_URL + "/special.png",
       title: "Special Education",
-      text: "Personalized teaching for individual growth."
+      text: "Personalized teaching for individual growth.",
     },
     {
-      img: "/parent.png",
+      img: process.env.PUBLIC_URL + "/parent.png",
       title: "Parent Counseling",
-      text: "Emotional support for families."
+      text: "Emotional support for families.",
     },
     {
-      img: "/art.png",
+      img: process.env.PUBLIC_URL + "/art.png",
       title: "Creative Activities",
-      text: "Art & play-based learning methods."
+      text: "Art & play-based learning methods.",
     },
   ];
 

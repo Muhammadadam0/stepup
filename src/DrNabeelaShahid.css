@@ -1,90 +1,197 @@
+/* 🌟 Section Base */
 .nabeela {
-  background: linear-gradient(135deg, #f6f8ff, #e3e8ff);
-  padding: 100px 20px;
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
-}
-
-.content {
+  position: relative;
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  color: #123067;
+  padding: 100px 8%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", "Noto Nastaliq Urdu", sans-serif;
+  isolation: isolate;
+}
+
+/* 💫 Subtle background texture overlay */
+.nabeela::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(200, 220, 255, 0.2) 0%,
+      transparent 70%
+    ),
+    radial-gradient(circle at 70% 80%, rgba(220, 230, 255, 0.25) 0%, transparent 80%);
+  z-index: 0;
+}
+
+/* 🌟 Layout */
+.nabeela .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 1;
 }
 
-.text {
-  max-width: 550px;
+/* 🖼️ Image Animation (fade + gentle float) */
+.nabeela .image {
+  flex: 1 1 40%;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeZoomIn 1.8s ease forwards;
 }
 
-.text h2 {
-  color: #0b1d4d;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.roles {
-  font-size: 1.1rem;
-  color: #1a2b5f;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.bio {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.8;
-}
-
-.image {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.image img {
-  width: 300px;
-  height: 300px;
+.nabeela .image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
-.image img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+.nabeela .image img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
 }
 
-/* Responsive for tablets and mobile */
+/* ✨ Text Section */
+.nabeela .text {
+  flex: 1 1 50%;
+  text-align: left;
+  min-width: 300px;
+  z-index: 2;
+}
+
+.nabeela .text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  color: #0a2a5c;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease forwards 0.3s;
+}
+
+.nabeela .text .roles {
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #0056b3;
+  width: 0;
+  animation:
+    typing 4s steps(60, end) 1s forwards,
+    blink 0.8s step-end infinite alternate;
+}
+
+.nabeela .text .bio {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  opacity: 0;
+  animation: fadeUp 1.5s ease forwards 1.5s;
+}
+
+/* 🌈 Animations */
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ✅ Responsive Design (Tablet + Mobile) */
 @media (max-width: 992px) {
-  .content {
-    flex-direction: column-reverse;
-    gap: 40px;
+  .nabeela {
+    padding: 80px 6%;
   }
 
-  .text h2 {
+  .nabeela .content {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .nabeela .image {
+    order: 1;
+    opacity: 1;
+    transform: scale(1);
+    animation: fadeZoomIn 1.3s ease forwards;
+  }
+
+  .nabeela .text {
+    order: 2;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nabeela .text h2 {
     font-size: 2rem;
   }
 
-  .image img {
-    width: 250px;
-    height: 250px;
+  .nabeela .text .roles {
+    font-size: 1rem;
+    white-space: normal;
+    border-right: none;
+    animation: none;
+    width: 100%;
+  }
+
+  .nabeela .text .bio {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 576px) {
-  .text h2 {
-    font-size: 1.8rem;
+/* 📱 Extra Small Devices (Phones < 600px) */
+@media (max-width: 600px) {
+  .nabeela {
+    padding: 70px 5%;
   }
 
-  .roles, .bio {
+  .nabeela .text h2 {
+    font-size: 1.7rem;
+  }
+
+  .nabeela .text .bio {
     font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  .image img {
-    width: 200px;
-    height: 200px;
+  .nabeela .image img {
+    max-width: 260px;
   }
 }
