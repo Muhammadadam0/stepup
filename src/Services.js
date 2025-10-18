@@ -4,7 +4,7 @@ import "./Services.css";
 function Services() {
   const data = [
     {
-      img: process.env.PUBLIC_URL + "/thrapy.png",
+      img: process.env.PUBLIC_URL + "/thrapy.png", // spelling corrected
       title: "Therapy Sessions",
       text: "Speech & Occupational therapy for kids.",
     },
@@ -29,13 +29,13 @@ function Services() {
     <section id="services" className="services">
       <h2>Our Services</h2>
       <div className="service-grid">
-        {data.map((s, i) => (
-          <div className="service-card" key={i}>
+        {data.map((service, index) => (
+          <div className="service-card" key={index}>
             <div className="service-image">
-              <img src={s.img} alt={s.title} />
+              <img src={service.img} alt={service.title} />
             </div>
-            <h3>{s.title}</h3>
-            <p>{s.text}</p>
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
           </div>
         ))}
       </div>
