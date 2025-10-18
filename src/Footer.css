@@ -15,8 +15,11 @@
 }
 
 .footer-about,
+.footer-links,
 .footer-contact {
   flex: 1 1 250px;
+  display: flex;
+  flex-direction: column; /* Ensures heading and ul/p stack vertically */
 }
 
 /* About Section */
@@ -34,10 +37,6 @@
 }
 
 /* Quick Links */
-.footer-links {
-  flex: 1 1 200px;
-}
-
 .footer-links h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -47,7 +46,7 @@
 .footer-links ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0; /* ensures ul stays right under h4 */
 }
 
 .footer-links ul li {
@@ -105,16 +104,28 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     gap: 30px;
+    align-items: center;
   }
 
-  .footer-links,
   .footer-about,
+  .footer-links,
   .footer-contact {
     text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 8px;
   }
 
   .footer-social {
