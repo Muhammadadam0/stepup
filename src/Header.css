@@ -164,7 +164,7 @@ nav a:hover {
 }
 
 .dropdown-toggle:hover {
-  color: #123067;
+  color: #ffcd39; /* yellow highlight on hover */
 }
 
 /* Dropdown Menu */
@@ -172,9 +172,9 @@ nav a:hover {
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: rgba(5, 30, 70, 0.95); /* matches header theme */
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   min-width: 220px;
   display: flex;
@@ -185,13 +185,13 @@ nav a:hover {
 .dropdown-menu a {
   padding: 10px 20px;
   font-size: 0.95rem;
-  color: #051e46;
-  transition: background 0.3s;
+  color: #ffffff; /* white text */
+  transition: background 0.3s, color 0.3s;
 }
 
 .dropdown-menu a:hover {
-  background: #f3f6ff;
-  color: #123067;
+  background: rgba(255, 205, 57, 0.2); /* soft yellow hover */
+  color: #ffcd39;
 }
 
 /* 🔹 Mobile Adjustments */
@@ -199,11 +199,17 @@ nav a:hover {
   .dropdown-menu {
     position: static;
     box-shadow: none;
-    background: transparent;
+    background: rgba(5, 30, 70, 0.9);
     padding: 0;
   }
 
   .dropdown-menu a {
     padding: 8px 0 8px 15px;
+    color: #fff;
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(255, 205, 57, 0.15);
+    color: #ffcd39;
   }
 }
