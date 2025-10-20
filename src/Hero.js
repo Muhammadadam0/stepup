@@ -15,7 +15,7 @@ function Hero({ lang }) {
       ur: "خصوصی تعلیم اور تھراپی خلوص کے ساتھ",
     },
     {
-      img: process.env.PUBLIC_URL + "/learning.jpeg",
+      img: process.env.PUBLIC_URL + "/learning3.jpeg",
       en: "Building Confidence Through Learning",
       ur: "سیکھنے کے ذریعے اعتماد پیدا کرنا",
     },
