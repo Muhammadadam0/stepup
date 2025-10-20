@@ -5,7 +5,7 @@ import "./Hero.css";
 function Hero({ lang }) {
   const slides = [
     {
-      img: process.env.PUBLIC_URL + "/cover.png",
+      img: process.env.PUBLIC_URL + "/cover2.jpeg",
       en: "Empowering Every Child to Shine",
       ur: "ہر بچے کو چمکنے کا موقع دینا ہمارا مشن ہے",
     },
