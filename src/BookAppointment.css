@@ -1,0 +1,174 @@
+/* 🌟 Overall Section */
+.appointment-section {
+  background: linear-gradient(135deg, #f4f8ff 0%, #e8efff 100%);
+  padding: 90px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🏢 Main Container Card */
+.appointment-container {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 50px 45px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #1e3d7b;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* 🩵 Title Styling */
+.appointment-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1e3d7b;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sub-text {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 35px;
+}
+
+/* 📝 Form Styling */
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e3d7b;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 13px 15px;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: #fafbff;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1e3d7b;
+  box-shadow: 0 0 8px rgba(30, 61, 123, 0.2);
+  background: #fff;
+}
+
+/* 📅 Date Picker */
+input[type="date"] {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* 🚀 Button */
+.submit-btn {
+  background: linear-gradient(135deg, #1e3d7b, #4a67c6);
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #4a67c6, #1e3d7b);
+  box-shadow: 0 10px 25px rgba(30, 61, 123, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ✅ Success Message */
+.success-message,
+.error-message {
+  text-align: center;
+  margin-top: 30px;
+  animation: fadeIn 0.6s ease;
+}
+
+.success-message h4 {
+  color: #2e7d32;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.success-message p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.error-message h4 {
+  color: #c62828;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.error-message p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* ✨ Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .appointment-container {
+    padding: 35px 25px;
+  }
+
+  .appointment-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+}

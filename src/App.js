@@ -5,6 +5,8 @@ import Hero from "./Hero";
 import About from "./About";
 import DrNabeelaShahid from "./DrNabeelaShahid";
 import Services from "./Services";
+import BookAppointment from "./BookAppointment";
+
 import Contact from "./Contact";
 import Footer from "./Footer";
 
@@ -20,6 +22,8 @@ function App() {
       <About lang={lang} />
       <DrNabeelaShahid lang={lang} />
       <Services lang={lang} />
+      <BookAppointment />
+
       <Contact lang={lang} />
       <Footer />
     </>
