@@ -1,0 +1,120 @@
+.recovery-section {
+  background: #f9fafc;
+  padding: 80px 20px;
+  font-family: "Inter", sans-serif;
+  color: #0d224f;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.recovery-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.recovery-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0d224f;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.recovery-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffcd39;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.recovery-subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recovery-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recovery-item {
+  text-align: left;
+}
+
+.recovery-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0d224f;
+  font-size: 1rem;
+}
+
+.percent {
+  color: #ffcd39;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.recovery-bar {
+  width: 100%;
+  height: 14px;
+  background: #e6e9f2;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.recovery-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0d224f, #ffcd39);
+  border-radius: 50px;
+  width: 0;
+  transition: width 2s ease-out;
+  box-shadow: 0 0 8px rgba(255, 205, 57, 0.6);
+}
+
+/* Soft floating background animation */
+.recovery-section::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 205, 57, 0.05), transparent 60%);
+  animation: floatBG 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatBG {
+  from {
+    transform: rotate(20deg) translateY(0px);
+  }
+  to {
+    transform: rotate(20deg) translateY(20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recovery-title {
+    font-size: 1.9rem;
+  }
+  .recovery-subtitle {
+    font-size: 0.95rem;
+  }
+  .recovery-container {
+    max-width: 90%;
+  }
+}

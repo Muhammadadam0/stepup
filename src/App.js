@@ -5,9 +5,11 @@ import Hero from "./Hero";
 import About from "./About";
 import DrNabeelaShahid from "./DrNabeelaShahid";
 import Services from "./Services";
+import RecoveryRate from "./RecoveryRate";
 import BookAppointment from "./BookAppointment";
 
 import Contact from "./Contact";
+import MapEmbed from "./MapEmbed";
 import Footer from "./Footer";
 
 function App() {
@@ -22,9 +24,11 @@ function App() {
       <About lang={lang} />
       <DrNabeelaShahid lang={lang} />
       <Services lang={lang} />
+      <RecoveryRate />
       <BookAppointment />
 
       <Contact lang={lang} />
+      <MapEmbed />
       <Footer />
     </>
   );
