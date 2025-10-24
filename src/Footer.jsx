@@ -61,7 +61,7 @@ function Footer() {
         {/* Contact Info */}
         <div className="footer-column">
           <h4>Contact</h4>
-          <p>📍 Ishaque Haroon Hospital, Lahore, Pakistan</p>
+          <p>📍 Ishaq Haroon Hospital, Lahore, Pakistan</p>
           <p>📞 +92 314 4383989</p>
           <p>📞 +92 332 4595172</p>
           <p>✉️ stepupinstitute@gmail.com</p>
