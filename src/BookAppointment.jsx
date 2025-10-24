@@ -62,8 +62,8 @@ export default function BookAppointment() {
   };
 
   return (
-    // ✅ Added id for Header navigation
-    <section id="book-appointment" className="appointment-section">
+    // ✅ ID updated so Hero button scrolls correctly
+    <section id="appointment" className="appointment-section">
       <div className="appointment-container">
         <h2>Book an Appointment</h2>
         <p className="sub-text">

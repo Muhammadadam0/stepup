@@ -49,11 +49,13 @@
   color: #fff;
   padding: 0 20px;
 
-  /* 🖤 Changed from blue to black transparent */
   background: linear-gradient(
     rgba(0, 0, 0, 0.65),
     rgba(0, 0, 0, 0.65)
   );
+
+  /* ✅ Thoda neeche shift kiya gaya */
+  transform: translateY(40px);
 }
 
 .overlay h1 {
@@ -131,6 +133,9 @@
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
     );
+
+    /* 📱 Mobile pe thoda kam shift */
+    transform: translateY(25px);
   }
 
   .overlay h1 {
