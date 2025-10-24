@@ -78,6 +78,11 @@ function Header({ lang, toggleLang }) {
           )}
         </div>
 
+        {/* ✅ Added Book Appointment Link */}
+        <a href="#book-appointment" onClick={() => setMenuOpen(false)}>
+          {lang === "en" ? "Book Appointment" : "اپوائنٹمنٹ بُک کریں"}
+        </a>
+
         <a href="#contact" onClick={() => setMenuOpen(false)}>
           {lang === "en" ? "Contact" : "رابطہ"}
         </a>

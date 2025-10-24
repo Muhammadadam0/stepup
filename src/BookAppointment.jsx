@@ -37,10 +37,7 @@ export default function BookAppointment() {
     const formData = new FormData(e.target);
     formData.append("access_key", ACCESS_KEY);
     formData.append("token", appointmentToken);
-    formData.append(
-      "subject",
-      `New Appointment Request - Step Up Institute`
-    );
+    formData.append("subject", `New Appointment Request - Step Up Institute`);
     formData.append("from_name", "Step Up Institute Website");
 
     try {
@@ -65,7 +62,8 @@ export default function BookAppointment() {
   };
 
   return (
-    <section className="appointment-section">
+    // ✅ Added id for Header navigation
+    <section id="book-appointment" className="appointment-section">
       <div className="appointment-container">
         <h2>Book an Appointment</h2>
         <p className="sub-text">
@@ -165,4 +163,5 @@ export default function BookAppointment() {
     </section>
   );
 }
+
 
