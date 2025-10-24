@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+  <url>
+    <loc>https://stepup.institute/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://stepup.institute/about</loc>
+  </url>
+  <url>
+    <loc>https://stepup.institute/services</loc>
+  </url>
+  <url>
+    <loc>https://stepup.institute/founder</loc>
+  </url>
+  <url>
+    <loc>https://stepup.institute/book-appointment</loc>
+  </url>
+  <url>
+    <loc>https://stepup.institute/contact</loc>
+  </url>
+</urlset>
